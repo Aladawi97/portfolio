@@ -1,5 +1,4 @@
 import { Box, Typography, Button, Stack, Avatar, Paper } from "@mui/material";
-import { FaDownload } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import profileImg from "../assets/profile.jpeg";
 
@@ -25,7 +24,7 @@ export default function HeroSection() {
         elevation={0}
         sx={{
           display: "flex",
-          flexDirection: { xs: "column-reverse", md: "row" },
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           justifyContent: "center",
           width: "100%",
@@ -34,6 +33,28 @@ export default function HeroSection() {
           boxShadow: "none",
         }}
       >
+        {/* Image in mobile */}
+        <Box
+          sx={{
+            display: { xs: "flex", md: "none" },
+            justifyContent: "center",
+            alignItems: "center",
+            mb: 3,
+          }}
+        >
+          <Avatar
+            src={avatarUrl}
+            alt="profile"
+            sx={{
+              width: 180,
+              height: 180,
+              boxShadow: "0 8px 40px #2196f355",
+              border: "6px solid #1a2733",
+              background: "#fff",
+            }}
+          />
+        </Box>
+
         {/* Left: Text */}
         <Box
           sx={{
@@ -84,6 +105,7 @@ export default function HeroSection() {
             code, beautiful interfaces, and seamless user experiences. Let’s
             create something amazing together!
           </Typography>
+
           <Stack direction="row" spacing={2}>
             <a
               href="/temp.pdf"
@@ -109,12 +131,13 @@ export default function HeroSection() {
             </a>
           </Stack>
         </Box>
-        {/* Right: Profile Image */}
+
+        {/* Image in desktop */}
         <Box
           sx={{
             flex: 1,
-            display: "flex",
-            justifyContent: { xs: "center", md: "flex-end" },
+            display: { xs: "none", md: "flex" },
+            justifyContent: "flex-end",
             alignItems: "center",
           }}
         >
@@ -122,8 +145,8 @@ export default function HeroSection() {
             src={avatarUrl}
             alt="profile"
             sx={{
-              width: { xs: 180, md: 260 },
-              height: { xs: 180, md: 260 },
+              width: 260,
+              height: 260,
               boxShadow: "0 8px 40px #2196f355",
               border: "6px solid #1a2733",
               background: "#fff",
