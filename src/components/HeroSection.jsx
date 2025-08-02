@@ -85,24 +85,7 @@ export default function HeroSection() {
             create something amazing together!
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Button
-              variant="contained"
-              size="large"
-              sx={{
-                background: blueBtnGradient,
-                color: "#fff",
-                fontWeight: "bold",
-                boxShadow: "0 2px 12px 0 #42a5f555",
-                "&:hover": {
-                  background:
-                    "linear-gradient(90deg, #64b5f6 0%, #1976d2 100%)",
-                  boxShadow: "0 4px 24px 0 #42a5f5aa",
-                },
-              }}
-              href="/contact"
-            >
-              Get a project
-            </Button>
+           
             <a
               href="/temp.pdf"
               download="Yihea_Aladawi_CV.pdf"
