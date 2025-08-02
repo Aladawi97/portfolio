@@ -25,7 +25,7 @@ export default function HeroSection() {
         elevation={0}
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column-reverse", md: "row" },
           alignItems: "center",
           justifyContent: "center",
           width: "100%",
@@ -85,7 +85,6 @@ export default function HeroSection() {
             create something amazing together!
           </Typography>
           <Stack direction="row" spacing={2}>
-           
             <a
               href="/temp.pdf"
               download="Yihea_Aladawi_CV.pdf"
