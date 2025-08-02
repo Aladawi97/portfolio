@@ -104,7 +104,7 @@ export default function HeroSection() {
               Get a project
             </Button>
             <a
-              href="/cv.pdf"
+              href="/temp.pdf"
               download="Yihea_Aladawi_CV.pdf"
               style={{ textDecoration: "none" }}
             >
